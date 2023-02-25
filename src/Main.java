@@ -41,6 +41,11 @@ public class Main {
         System.out.println("Количество четных чисел в списке: " +
                 list.stream()
                         .filter(x -> x % 2 == 0)
+                        .map(Main::print)
                         .count());
+    }
+    public static Integer print(Integer i){
+        System.out.println(i);
+        return i;
     }
 }
